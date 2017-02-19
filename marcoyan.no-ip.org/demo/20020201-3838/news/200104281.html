@@ -1,0 +1,105 @@
+<html>
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/news/200104281.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:13:47 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三國歪傳之降龍伏虎</title>
+<link rel="stylesheet" href="../ccs/font.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+<BODY background="../pic/bg.gif">
+<div id="mainlayer" style="position:absolute; left:40px; top:15px; width:500px; height:550px; z-index:1"> 
+  <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr> 
+      <td> 
+        <div align="center"><img src="../pic/logo12.jpg" width="399" height="75"></div>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <table width="480" border="0" cellspacing="1" cellpadding="3" align="center">
+          <tr>
+            <td> 
+              <p class="font2" align="center"><b>關於國家技能<BR></b></p>  
+              <p class="font2">由於國家技能即將開放, 所以先在這裡跟大家討論她運作的方式及計算的方法<br>  
+              <br>  
+              1‧運作<br>  
+              　撰寫時分兩個步驟<br>
+              　a)基本骨架的撰寫, 這個部分是寫完就不能在更改的部分, 如<br>  
+              　　i) 武功的分類, 劍法, 刀法等等<br>  
+              　　ii) 限制, 這個技能是可以給哪些職業使用, 哪些職業的熟練度最高多少<br>  
+              　　iii) 武功的名稱, 說明一些有關設定部分<br>  
+              <br>  
+              　b)武功招式及武功強度部分, 這部分是可以慢慢修改增強, 但一個武功必須至少有<br>  
+              　　三招, 每一招有幾個數值要玩家進行設定<br>  
+              　　1) 武功招式敘述.<br>  
+              　　2) 武功出現的機率<br>  
+              　　3) 武功的強度<br>  
+              　　4) 武功攻擊時偏好的部位, 例如眼睛, 頭等等<br>  
+              　　5) 法器指定, 及法器加強比例( 這一部份不開放給玩家使用)<br>  
+              <br>  
+              　　對於機率及強度必須要再討論一夏, 例如某一武功有三招. 分別為 A, B, C三招<br>  
+              　　A --> 機率 20 強度 50<br>  
+              　　B --> 機率 30 強度 70<br>  
+              　　C --> 機率 40 強度 100<br>  
+              <br>  
+              　　所以每招出現的真正機率是<br>
+              　　A --> 20 / ( 20 + 30 + 40 ) = 2 /9<br>  
+              　　B --> 30 / ( 20 + 30 + 40 ) = 3 /9<br>  
+              　　C --> 40 / ( 20 + 30 + 40 ) = 4 /9<br>  
+              <br>  
+              　　所以這項武功強度的期望值為<br>
+              　　50 * ( 2/9) + 70 * ( 3/9) + 100 * ( 4/9) = 710 / 9 約為 80<br>  
+              　　代表如果熟練度百分之百時每招攻擊強度約為 80<br>  
+              　　當然系統會再根據一些數值來修正, 如武器, 熟練度, 但強度與攻傷值是成正比的<br>  
+              　　換句話說, 強度越強照成傷害再機率上來說是越高的.<br>  
+              <br>  
+              　　但是在設計時就得要花花腦筋了, 不見的一定要增成強度, 機率也是很重要的<br>  
+              　　所以寫武功時建議各位要找數理清楚的人來寫, 不然就...<br>  
+              <br>  
+              　　但又有問題, 如果系統可以隨時接受強度修正, 那已經練的人不就...<br>  
+              　　例如我當初練某招時, 強度只有 20  我都練到 80%..<br>  
+              　　只要我慢慢等, 像股票依樣漲了, 我不就發了..<br>  
+              　　提醒各位, 技能不是股票, 沒有漲跌的. 系統會隨時調整妳的熟練度.<br>  
+              <br>  
+              　　例如當初妳練的時候 強度 20 熟練度 100%..當後來慢慢修改成 強度 50 時<br>  
+              　　系統會自動幫你調整為 20 * 100 / 50 --> 40%<br>  
+              　　所以當你發現熟練度下降時, 不要驚訝, 那是這個技能強度升高了<br>  
+              <br>  
+              　　那如何調整呢? 事實上系統只限制技能的最大值, 及平均攻傷.<br>  
+              　　例如劍法 最大值(這個是由 Cutty 設定) 為 x, 平均攻傷 y<br>  
+              　　那每一招的強度就不能超過 x, 期望值不能超過 y<br>  
+              <br>  
+              　　假設調整前期望值為 Y1, 調整後期望值為 Y2<br>  
+              　　所需幫派點數為 (Y2-Y1) * (技能每點因數)<br>  
+              　　所以要強的武功, 多花點國家點數吧..<br>  
+              </p>       
+              <div align="right"><span class="font2">jammy@3838　　</span>　　<br>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <p align="center"><a href="index.html" target="_self">回上頁</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div align="center"><span class="font">Copyright &copy 2001 Mud 3838 All  
+          rights reserved.</span></div> 
+      </td> 
+    </tr> 
+  </table> 
+</div> 
+</BODY> 
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/news/200104281.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:13:47 GMT -->
+</html> 

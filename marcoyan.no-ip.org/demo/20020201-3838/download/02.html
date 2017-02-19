@@ -1,0 +1,486 @@
+<html>
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/download/02.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:15:48 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三國歪傳之降龍伏虎</title>
+<link rel="stylesheet" href="../ccs/font.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+<BODY background="../pic/bg.gif">
+<div id="mainlayer" style="position:absolute; left:40px; top:15px; width:500px; z-index:1"> 
+  <table width="500" border="0" cellspacing="0" cellpadding="3" align="center">
+    <tr> 
+      <td> 
+        <div align="center"></div>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <div align="center"><a href="00.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a> | <a href="02.html" target="_self">下一篇</a></span></div>
+        </td>
+    </tr>
+    <tr> 
+      <td> 
+        <p class="text2">&nbsp;</p>
+        <p class="text2" align="center"><font size="4"><b class="font2">房間寫法介紹</b></font></p>
+        <p class="text2" align="left"><span class="text4">一、檔案位置﹕</span><span class="text2"><br>
+          <br>
+          所有在 &lt;區域&gt;/roo/ 目錄底下的 *.roo 檔案都是房間檔案﹐而區域<br>
+          就是由這些檔案所相連而成。<br>
+          <br>
+          </span><span class="text4">二、格式:</span><span class="text2"><br>
+          <br>
+          * /* 任何有 * 開頭的就是註解﹐系統不會讀入 */<br>
+          Vnum &lt;數字&gt;<br>
+          Name &lt;字串&gt;~<br>
+          Description<br>
+          &lt;字�&gt;<br>
+          ~<br>
+          SectorType &lt;數字或字串常數&gt;<br>
+          RoomFlag <br>
+          &lt;字串常數&gt; Yes<br>
+          ~<br>
+          <br>
+          #Exit<br>
+          * /* 任何有 * 開頭的就是註解﹐系統不會讀入 */<br>
+          Direction &lt;數字或字串常數&gt;<br>
+          Direction &lt;數字或字串常數&gt;<br>
+          ExitVnum &lt;數字&gt;<br>
+          ExitDesc &lt;字串&gt;~<br>
+          ExitKeyword &lt;字串&gt;~<br>
+          Message &lt;字串&gt;~<br>
+          ExitKey &lt;數字&gt;<br>
+          &lt;字串常數&gt; Yes<br>
+          End<br>
+          <br>
+          #Keyword<br>
+          * /* 任何有 * 開頭的就是註解﹐系統不會讀入 */<br>
+          Keyword &lt;字串&gt;~<br>
+          Description<br>
+          &lt;字串&gt;<br>
+          ~<br>
+          End<br>
+          <br>
+          #Job<br>
+          * /* 任何有 * 開頭的就是註解﹐系統不會讀入 */<br>
+          Keyword &lt;字串&gt;~<br>
+          Function &lt;字串&gt;~<br>
+          Position &lt;數字或字串常數&gt;<br>
+          End<br>
+          <br>
+          End /* 標示房間檔案的結束 */<br>
+          <br>
+          </span><span class="text4">三、 範例:</span><span class="text2"><br>
+          <br>
+          Vnum 301<br>
+          Name 十字道路~<br>
+          Description<br>
+          一條人群擁擠的道路﹐你感到很熱。<br>
+          ~<br>
+          SectorType SECT_INSIDE<br>
+          INDOOR Yes<br>
+          <br>
+          #Exit<br>
+          Direction SOUTH<br>
+          ExitVnum 302<br>
+          ExitKeyword door~<br>
+          ExitDesc 一個門~<br>
+          Message 你大步一跨﹐離開了十字道路。~<br>
+          ExitKey 0<br>
+          IsDoor Yes<br>
+          End<br>
+          <br>
+          #Keyword<br>
+          Keyword sign~<br>
+          Description<br>
+          一個路標。<br>
+          ~<br>
+          End<br>
+          <br>
+          #Job<br>
+          Keyword search~<br>
+          Function job_search_wall~<br>
+          Position POS_STANDING<br>
+          End<br>
+          <br>
+          End<br>
+          <br>
+          </span><span class="text4">四、說明:</span><span class="text2"><br>
+          <br>
+          (1) Vnum (房間號碼)﹕<br>
+          代表這間房間號碼﹐這個選項不可忽略﹐而且房間號碼一定要是數<br>
+          字﹐且不可以小於 0﹐正確的房間號碼請和房間撰寫人分配好﹐之<br>
+          後在撰寫。<br>
+          分配的房間號碼會寫在 ~/mud/area/document/areanumber.list<br>
+          這個檔裡面﹐並且會隨時更新。<br>
+          <br>
+          P.S. 房間撰寫人目前為 Cutty 。<br>
+          <br>
+          (2) Name (房間名稱)﹕<br>
+          代表這間房間的簡短敘述﹐像可以是洛陽中央廣場﹐請以字串結束<br>
+          符號( ~ )結束。這個選項也不可以被忽略。<br>
+          <br>
+          (3) Description (房間描述)﹕<br>
+          代表這間房間完整的敘述﹐也就是你來到這間房間時所看到的敘述<br>
+          ﹐因為考慮到對齊﹐所以是從這個關鍵字下一行開始撰寫。上一行<br>
+          所有的東西都將被忽略。請以字串結束符號( ~ ) 結束﹐這個選項<br>
+          不可以被忽略.<br>
+          <br>
+          (4) SectorType (房間地形)﹕<br>
+          </span><br>
+          SECT_INSIDE 0 室內<br>
+          SECT_CITY 1 城市<br>
+          SECT_FIELD 2 原野<br>
+          SECT_FOREST 3 森林<br>
+          SECT_HILLS 4 山丘<br>
+          SECT_MOUNTAIN 5 山區<br>
+          SECT_WATER_SWIM 6 可游泳水域<br>
+          SECT_WATER_NOSWIM 7 不可游泳水域<br>
+          8 未使用<br>
+          SECT_AIR 9 天空<br>
+          SECT_DESERT 10 沙漠<span class="text2"><br>
+          <br>
+          代表這間房間的地形﹐這個數值和你移動時所耗的移動力有關﹐如<br>
+          果你沒有寫這個選項時﹐系統的內定值將會是 SECT_INSIDE﹐也就<br>
+          是室內。<br>
+          </span><span class="text-red">注意，這行必需填寫，系統沒有設定成內定值。</span><span class="text2"><br>
+          <br>
+          每一個項目會消耗的體力如下﹕<br>
+          </span><br>
+          室內(SECT_INSIDE) 1<br>
+          城市(SECT_CITY) 0<br>
+          原野(SECT_FIELD) 1<br>
+          森林(SECT_FOREST) 3<br>
+          山丘(SECT_HILLS) 4<br>
+          山岳(SECT_MOUNTAIN) 6<br>
+          水域可游泳(SECT_WATER_SWIM) 4<br>
+          水域不可游泳(SECT_WATER_NOSWIM) 1<br>
+          未使用<br>
+          天空(SECT_AIR) 6<br>
+          沙漠(SECT_DESERT) 6<span class="text2"><br>
+          <br>
+          (5) RoomFlag (房間狀態旗標)﹕</span></p>
+        <p class="text2"> Dark Yes 黑暗<br>
+          NoMob Yes mob 不能進入<br>
+          Indoors Yes 室內<br>
+          Private Yes 只能容許一位玩家進入<br>
+          Safe Yes 安全<br>
+          ForeverLight Yes 永明<br>
+          NoRecall Yes 不能 recall<br>
+          DepositMoney Yes 錢莊<br>
+          StoreRoom Yes 鏢局<br>
+          NoFight Yes 不能戰鬥<br>
+          NoQuit Yes 無法 quit<br>
+          Club Yes 幫派聚會點<br>
+          Memorize Yes 傳送點<br>
+          Stock Yes 證交所<br>
+          NoWhere Yes 無法使用 where 並且無法施展 summon <br>
+          Sail Yes 船艙(不要設)<br>
+          Fane Yes 寺廟(指令 endow 使用)<br>
+          Killer Yes 八仙飯店(指令 endow 使用)<br>
+          Standard Yes 樣本房間(不要設 給 home 用的)<br>
+          <br>
+          代表房間的狀態的旗標﹐這個數代表這間房間的性質﹐就像下面選<br>
+          項所描述的﹐如果你沒有寫這個選項時﹐系統的內定值將會是<br>
+          INDOOR Yes也就是室內。<br>
+          <br>
+          個別說明如下﹕<br>
+          <br>
+          房間暗的(DARK)﹕<br>
+          一般來說﹐房間的明暗會隨著時間來改變﹐但是城市區域內定<br>
+          為永亮的區域﹐而你如果使用這個選項的話則可以使房間處於<br>
+          永暗的狀態﹐不會隨時間變動﹐要拿火把才能看到房間的敘述<br>
+          與物品。<br>
+          <br>
+          沒有怪物(NoMob)﹕<br>
+          這個旗標設定這個房間不會有怪物前來﹐( 已經讀取出來在此<br>
+          處的不算 )﹐亦即一些會隨處走動的怪物遇到這種房間也不會<br>
+          走過來。<br>
+          <br>
+          室內(INDOOR)﹕<br>
+          這個旗標設定房間是處於室內狀態﹐不會隨著時間（日升日落<br>
+          ）給予玩家敘述﹐並且基本上處於黑暗狀態。<br>
+          <br>
+          私人(PRIVATE)﹕<br>
+          這個旗標表示這個房間是私人擁有﹐通常只能允許兩個人在此<br>
+          （包含怪物） ﹐若是超過則不能行走或是傳送等等。<br>
+          <br>
+          安全(SAFE)﹕<br>
+          這個旗標設定這個房間不能打鬥﹐通常在一些玩家所在的位置<br>
+          是可以設定這個旗標來保護新手﹐預防被偷襲或是被怪物追殺。<br>
+          <br>
+          禁止傳送(NoRecall)﹕<br>
+          一個房間如果有設定這個旗標則表示這個房間不能回歸(recall)<br>
+          ﹐不然基本上都是可以回歸的。<br>
+          <br>
+          永明(ForeverLight)﹕<br>
+          這個旗標設定這個房間處於永遠明亮的狀態。<br>
+          <br>
+          錢莊(DepositMoney)﹕<br>
+          這個旗標設定這個房間可以提供玩家做存提款的動作﹐亦即銀<br>
+          行的功能﹐銀行和商店不同﹐商店是以怪物為基礎來買賣﹐如<br>
+          果怪物死掉則不能買賣﹐銀行則是以房間為準。<br>
+          <br>
+          鏢局(RoomStoreroom)﹕<br>
+          這個旗標設定這個房間可以提供玩家做存取裝備的動作﹐這個<br>
+          亦是以房間為主。<br>
+          <br>
+          不准戰鬥(NOFIGHT)﹕<br>
+          這個旗標目前沒有用。<br>
+          <br>
+          不准離線(NOQUIT):<br>
+          這個旗標讓玩家不可以在這一格離開遊戲﹐或是自殺等等。<br>
+          <br>
+          可以記憶(MEMORIZE)﹕<br>
+          如果一個房間有設定這個旗標則表示此房間可以讓玩家在此設<br>
+          定回歸點﹐一個玩家有十個回歸點可以設定﹐所以一個城市基<br>
+          本上要設定一些回歸點提供玩家使用。<br>
+          <br>
+          證券交易所(STOCK)﹕<br>
+          一個房間設定加上這個旗標的話﹐這個房間就是證券交易所﹐<br>
+          也就是玩家可以在此買賣證券股票﹐若不是在交易所則所買賣<br>
+          的手續費會比較貴。</p>
+        <p class="text2"> 迷宮(NoWhere)﹕<br>
+          設定此旗標可以說是隔離起來。當然，在內是不能使用 where<br>
+          跟 summon ，在外面的也無法查到在此房間的怪物，也無法招<br>
+          喚。<br>
+          <br>
+          基本上上面所提到的旗標一個房間可以設定很多個﹐你可以連續使<br>
+          用，如 NoQuit Yes<br>
+          NoRecall Yes<br>
+          表示一個不能回歸與離開遊戲的房間。<br>
+          <br>
+          (6) #Exit( 出口方面 )﹕<br>
+          你可以忽略這個選項﹐如果你這間房間是沒有出口的話﹐你就是利<br>
+          用這個選項和其他房間來連接﹐請注意系統並不會幫你連接﹐這意<br>
+          味著若有兩間房間若是相通﹐你必須在這兩間房間都必須撰寫出口<br>
+          ﹐如果只寫一邊的話只可以產生單向出口的房間。<br>
+          若出口連接部份若有重複﹐例如某一間房間的東方出口有通往兩個<br>
+          房間﹐或是房間出口連過去和連回來的房間不同﹐系統會自動修正<br>
+          ﹐且回報到錯誤檔裡。<br>
+          <br>
+          1. Direction (出口方向)﹕<br>
+          <br>
+          北 ( SOUTH ) 0<br>
+          東 ( EAST ) 1<br>
+          南 ( SOUTH ) 2<br>
+          西 ( WEST ) 3<br>
+          上 ( UP ) 4<br>
+          下 ( DOWN ) 5<br>
+          進入 ( ENTER ) 6<br>
+          出去 ( OUT ) 7<span class="text6"><br>
+          </span><br>
+          代表哪一個方向與某一房間連接﹐這一個選項是不可以被省略的<br>
+          ﹐而且數值若不在以下的範圍內﹐會造成系統工作不正常。<br>
+          <br>
+          2. ExitVnum (出口連接的房間)﹕<br>
+          代表出口房間的號碼﹐這個選項不可以省略。<br>
+          <br>
+          3. ExitKeyword (出口關鍵字)﹕<br>
+          表示這個出口的關鍵字﹐不可以省略﹐請以字串結束符號( ~ )<br>
+          結束﹐這個關鍵字即是你用來設定門的名稱所使用﹐原則上如果<br>
+          為一個門的話﹐內定名稱為 door ﹐如果你要設定為另一個名稱<br>
+          的話﹐則使用這個選項﹐你便可以使用如 unlock gate 等等的<br>
+          動作。<br>
+          <br>
+          4. ExitDesc (出口描述)﹕<br>
+          和出口關鍵字有關的描述﹐不可以省略﹐請以字串結束符號( ~ )<br>
+          結束﹐這個關鍵字是你 look 這個方向時所看見的敘述。<br>
+          <br>
+          5. Message (出口訊息)﹕<br>
+          你可以設定當你離開一些出口時所送出的訊息﹐這個也是以字串<br>
+          結束符號( ~ ) 來作為結束。<br>
+          <br>
+          6. Lock (出口狀態)﹕<br>
+          <br>
+          IsDoor Yes 此處為門<br>
+          Closed Yes 有關上的門<br>
+          Locked Yes 有上鎖的門(可以用技能開鎖)<br>
+          Pick Yes 有上鎖且無法開鎖的門(只能用鑰匙)<br>
+          <br>
+          這個選項表示這個出口的預設狀態。<br>
+          <br>
+          7. ExitLock (出口鑰匙號碼)﹕<br>
+          若這個出口是可以上鎖的話﹐那麼這個數值就是這個鎖匙的號碼<br>
+          ﹐不然這個數值基本上沒有使用。<br>
+          <br>
+          8. 請以 End 結束 #Exit 的敘述。<br>
+          <br>
+          (7) #Keyword (關鍵字方面)﹕<br>
+          1. Keyword (關鍵字)﹕<br>
+          就是這間房間裡面可以看到特殊的關鍵字﹐換句話說﹐你可以在<br>
+          這間房間裡面 look 這個關鍵字﹐請以字串結束符號( ~ ) 結束。<br>
+          <br>
+          2. Description (描述)﹕<br>
+          就是上述 look 這個關鍵字時所出現完整的描述。這個敘述因為<br>
+          考慮到對齊﹐所以是從這個關鍵字下一行開始撰寫﹐第一行所有<br>
+          的東西都將被忽略﹐請以字串結束符號( ~ ) 結束。<br>
+          <br>
+          3. 以上這兩個只要你有 #Keyword 這個選項時都不可以省略。<br>
+          <br>
+          4. 以 End 代表結束。<br>
+          <br>
+          (8) #Job (特殊觸發方面)﹕<br>
+          1. Keyword (關鍵字)﹕<br>
+          這個房間做特殊的動作時所觸發程式的關鍵命令﹐如果命令對了<br>
+          ﹐方會去執行功能部份﹐這個部份要以字串結束符號結尾。<br>
+          <br>
+          2. Function (功能函數)﹕<br>
+          這個是真正使用到的功能名稱﹐這個功能必須在程式中( job.c )<br>
+          有定義過方能使用﹐類似怪物的特殊函式的功能﹐一樣以字串結<br>
+          束符號結束。<br>
+          <br>
+          3. Position (最低狀態)﹕<br>
+          <br>
+          POS_DEAD 0 (死亡)<br>
+          POS_SLEEPING 1 (睡覺)<br>
+          POS_RESTING 2 (休息)<br>
+          POS_FIGHTING 3 (打架)<br>
+          POS_STANDING 4 (站立)<br>
+          <br>
+          定義使用這個特殊函式時所需的最低狀態﹐一般為 POS_STANDING<br>
+          ( 站立 )﹐其餘如上所示。<br>
+          <br>
+          4.如果有需要可以向程式設計者提出需要 job 函數的申請﹐另外<br>
+          提供一個函數即類似回到新手區的功能給大家寫區域輔助用﹐寫<br>
+          法如下﹕<br>
+          <br>
+          #Job<br>
+          Keyword new~<br>
+          Function job_recall_new~<br>
+          Position POS_STANDING<br>
+          End<br>
+          <br>
+          5.以上 Keyword 跟 Function 如果有 #Job 都必須存在。<br>
+          <br>
+          6.以 End 代表結束。<br>
+          <br>
+          (9) 整個 #ROOM 敘述不一定要有 #EXIT 和 #Keyword 、 #Job 這三<br>
+          個選項﹐但這意味著這間房間會沒有出口且沒有關鍵字可以觀看。<br>
+          <br>
+          (10) 為了以後除錯方便﹐請多用字串常數來代替常數。</p>
+        <p> <span class="text2"><br>
+          (11) 系統內有提供一個房間產生器以方便區域撰寫人來撰寫﹐這個程<br>
+          式放在 /home/mud/make 裡的 makeroom﹐你可以輸入 me 來使<br>
+          用﹐或是使用 map 指令來產生房間﹐請見 map 使用說明文件。<br>
+          <br>
+          </span><span class="text4">五、附註:</span><span class="text2"><br>
+          <br>
+          (1) 字串常數﹕<br>
+          <br>
+          * 方向<br>
+          <br>
+          NORTH 0<br>
+          EAST 1<br>
+          SOUTH 2<br>
+          WEST 3<br>
+          UP 4<br>
+          DOWN 5<br>
+          ENTER 6<br>
+          OUT 7<br>
+          <br>
+          * 房間旗標</span></p>
+        <p><span class="text2">Dark Yes <br>
+          NoMob Yes <br>
+          Indoors Yes <br>
+          Private Yes <br>
+          Safe Yes <br>
+          ForeverLight Yes <br>
+          NoRecall Yes <br>
+          DepositMoney Yes <br>
+          StoreRoom Yes <br>
+          NoFight Yes <br>
+          NoQuit Yes <br>
+          Club Yes <br>
+          Memorize Yes <br>
+          Stock Yes <br>
+          NoWhere Yes <br>
+          Sail Yes <br>
+          Fane Yes <br>
+          Killer Yes <br>
+          Standard Yes <br>
+          <br>
+          * 地形旗標<br>
+          <br>
+          SECT_INSIDE 0<br>
+          SECT_CITY 1<br>
+          SECT_FIELD 2<br>
+          SECT_FOREST 3<br>
+          SECT_HILLS 4<br>
+          SECT_MOUNTAIN 5<br>
+          SECT_WATER_SWIM 6<br>
+          SECT_WATER_NOSWIM 7<br>
+          SECT_AIR 8<br>
+          SECT_DESERT 9<br>
+          <br>
+          * 房間出口狀態旗標<br>
+          <br>
+          EX_ISDOOR 1<br>
+          EX_CLOSED 3<br>
+          EX_LOCKED 7<br>
+          EX_PICKPROOF 39<br>
+          <br>
+          * 人物狀態<br>
+          <br>
+          POS_DEAD 0<br>
+          POS_SLEEPING 1<br>
+          POS_RESTING 2<br>
+          POS_FIGHTING 3<br>
+          POS_STANDING 4<br>
+          <br>
+          (2) 檔案名稱與位置﹕<br>
+          <br>
+          房間檔一律放在區域的 roo 子目錄下﹐檔名為 *.roo ﹐為了方便﹐<br>
+          一般會將檔名設為房間 VNUM ﹐例如房間號碼 501 則設為 501.roo<br>
+          ﹐注意﹐在 roo 目錄下所有 *.roo 的檔案都將視為房間檔案。<br>
+          <br>
+          (3) 房間撰寫輔助工具﹕<br>
+          <br>
+          1. ME: (在 MUD -- 140.136.196.82 工作站下鍵入 me 即可進入)<br>
+          這個程式用來輔助撰寫區域﹐目前功能僅有寫標題房間重置等等<br>
+          ﹐依循提示選取即可﹐相當方便。<br>
+          <br>
+          2. map: (在 MUD -- 140.136.196.82 工作站下鍵入 map &lt;地圖檔案名&gt; 即可使用)<br>
+          這個程式用來大量產生區域時使用﹐你必須先產生一個地圖檔。<br>
+          例如﹕<br>
+          <br>
+          0 1 2 3 4<br>
+          5 0 6 7 8<br>
+          <br>
+          其中為 0 的部分代表沒有房間﹐大於零的號碼則表是房間的號<br>
+          碼相鄰的房間會產生出口﹐如 2 6 之間會產生出口﹐1 2 之間<br>
+          也會﹐包含東西南北向的出口﹐等產生完房間檔案後再予以修改<br>
+          。(若有疑問請使用 map -h 查詢﹐或是見令一篇 map 使用說明 )<br>
+          <br>
+          (4) 重要提醒事項﹕<br>
+          <br>
+          若要設定為一個門﹐請設定出口狀態 EX_ISDOOR 和 EX_ISCLOSE<br>
+          並且在設定重置處將其關起來(詳見區域重置寫作)。<br>
+          </span> </p>
+        <p class="text2"><br>
+        </p>
+        </td>
+    </tr>
+    <tr> 
+      <td> 
+        <div align="center"><a href="00.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a> | <a href="02.html" target="_self">下一篇</a></span></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</BODY>
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/download/02.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:15:48 GMT -->
+</html>

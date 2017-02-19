@@ -1,0 +1,139 @@
+<html>
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/download/05.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:15:48 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三國歪傳之降龍伏虎</title>
+<link rel="stylesheet" href="../ccs/font.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+<BODY background="../pic/bg.gif">
+<div id="mainlayer" style="position:absolute; left:40px; top:15px; width:500px; z-index:1"> 
+  <table width="500" border="0" cellspacing="0" cellpadding="3" align="center">
+    <tr> 
+      <td> 
+        <div align="center"></div>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <div align="center"><a href="04.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a> | <a href="06.html" target="_self">下一篇</a></span></div>
+        </td>
+    </tr>
+    <tr> 
+      <td> 
+        <p class="text2">&nbsp;</p>
+        <p class="text2" align="center"><b><font size="4" class="text2">區域標題寫法介紹</font></b></p>
+        <p class="text2"><span class="text4">一、檔案位置﹕</span></p>
+        <p class="text2">標題檔案位在區域目錄下﹐如以洛陽為例﹐洛陽目錄下的檔案與目錄如下﹕</p>
+        <p class="text2"> [lc] mud:~/mud/area/loyang$ ls<br>
+          <span class="text-red">index</span> mob/ obj/ res/  roo/  shp/</p>
+        <p class="text2">其中 index 檔案即為標題檔案﹐為區域所必須﹐若缺乏則區域無法讀入。</p>
+        <p class="text4">二、格式﹕</p>
+        <p class="text2">* /* 以 * 開頭的這一行則為註解﹐系統不會讀入 */<br>
+          Echo &lt;字串常數或數字&gt;<br>
+          Editor &lt;字串&gt;~<br>
+          Name &lt;字串&gt;~<br>
+          Capital &lt;數字&gt;<br>
+          Serial &lt;數字&gt;<br>
+          Fog &lt;數字&gt;<br>
+          Fight &lt;是或否&gt;<br>
+          NewHand &lt;是或否&gt;<br>
+          PK &lt;是或否&gt;<br>
+          Upper &lt;字串常數或數字&gt;<br>
+          Lower &lt;字串常數或數字&gt;<br>
+          Description<br>
+          &lt;字串&gt;<br>
+          ~</p>
+        <p class="text2">End /* 標示標題檔案的結束﹐請一定要寫 */</p>
+        <p class="text4">三、範例﹕</p>
+        <p class="text2">* 這是一段註解﹐給自己看的。<br>
+          Echo NO_ECHO<br>
+          Editor Cutty~<br>
+          Name 特殊地方~<br>
+          Fog 25<br>
+          Serial 101<br>
+          Upper LEVEL_PC<br>
+          Lower 1<br>
+          NewHand YES<br>
+          Description<br>
+          這是一個特殊地方﹐你看不見我﹐除非你是神﹐嘿嘿﹗<br>
+          ~</p>
+        <p class="text2">End</p>
+        <p class="text4">四、說明﹕</p>
+        <p class="text-red"> 註﹕Flags 已經取消﹐請勿再行使用﹗</p>
+        <p class="text2"> (1) Echo (區域的顯現屬性)﹕</p>
+        <p class="text2"> NO_ECHO 0 不顯現<br>
+          WILL_ECHO 1 會顯現</p>
+        <p class="text2"> 1. 不設定時預設值為 1 (WILL_ECHO), 會顯現。<br>
+          2. 區域若設定為不顯現﹐則只有神族可以看的見﹐玩家在區域<br>
+          列表中不會見到此區域。</p>
+        <p class="text2"> (2) Editor (區域撰寫人)﹕<br>
+          1. 一定要設定, 否則系統不能啟動。<br>
+          2. 最後面一定要有字串結束符號( ~ )。<br>
+          3. 可以有多人以上﹐代表此區域有多人撰寫﹐但請勿太長。</p>
+        <p class="text2"> (3) Name (區域名稱)﹕<br>
+          1. 一定要設定, 否則系統不能啟動。<br>
+          2. 後面要有字串結束符號( ~ )。</p>
+        <p class="text2"> (4) Upper (建議較高等級)﹕</p>
+        <p class="text2"> LEVEL_GOD 120<br>
+          LEVEL_SUP 119<br>
+          LEVEL_DEI 118<br>
+          LEVEL_ANG 117<br>
+          LEVEL_HER 116<br>
+          LEVEL_IMM 101<br>
+          LEVEL_PC 100</p>
+        <p class="text2"> 1. 此為你建議可以逛此區域的等級﹐若高於此等級不會有太多<br>
+          的經驗值。<br>
+          2. 可以用字串代替數字。<br>
+          3. 在撰寫區域時除了城池之外﹐請將怪物等級限定在一個範圍<br>
+          內﹐讓玩家可以有固定的地方升級。</p>
+        <p class="text2"> (5) Lower (建議較低等級)﹕</p>
+        <p class="text2"> 字串常數同上項 Upper 所提到。</p>
+        <p class="text2"> 1. 此為你所建議逛此區域的最低等級﹐若低於此等級將可能無法勝任。<br>
+          2. 可以用字串代替數字。</p>
+        <p class="text2"> (6) Fight, NewHand, PK (區域旗標)﹕</p>
+        <p class="text2"> (7) Description (區域描述)﹕<br>
+          1. 此為區域的輔助說明﹐在 area help &lt;區域號碼&gt; 時可以見到。<br>
+          2. 若為城池建議說明下列項目﹕<br>
+          a. 位置 ﹕ 說明此區域的位置。<br>
+          b. 交通 ﹕ 說明此區域如何與其他地方溝通。<br>
+          c. 怪物 ﹕ 說明怪物等級的分佈。<br>
+          d. 轉職者﹕ 說明城內有哪一些轉職者供玩家轉職。<br>
+          e. 訓練者﹕ 說明城內有哪一些訓練者供玩家訓練屬性。<br>
+          3. 若非城池則非常希望能說明如何到達﹐解迷可以不用述說。</p>
+        <p class="text2"> (8) End ( 代表此格式結束的符號 )﹕<br>
+          如果結束﹐一定要有 End。</p>
+        <p class="text4">四、附註:</p>
+        <p><span class="text2">(一)若有新加區域請在 ~/mud/area/document/areanumber.list 
+          中註明使用號碼。<br>
+          並在 ~/mud/help/areanumber.hlp 中寫明區域號碼﹐方便察看。 <br>
+          另外還有 ~/mud/area/document/mapwrite.list 中寫明出口。<br>
+          如果無權限更動則請其他較高等神族幫忙。<br>
+          </span> </p>
+        <p><br>
+        </p>
+      </td>
+    </tr>
+    <tr> 
+      <td> 
+        <div align="center"><a href="04.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a> | <a href="06.html" target="_self">下一篇</a></span></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</BODY>
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/download/05.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:15:48 GMT -->
+</html>

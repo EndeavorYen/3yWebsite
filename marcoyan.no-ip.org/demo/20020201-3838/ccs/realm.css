@@ -1,0 +1,21 @@
+.font {  font-size: 12px; font-family: "Verdana", "Arial", "Helvetica", "sans-serif"}
+a:active {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #FF0000}
+a:hover {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #FF0000}
+a:link {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #FF9966}
+a:visited {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #FF9966}
+.darkgreen {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:
+12px; color: #009933}
+.darkyellow {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:
+12px; color: #996600}
+.darkblue {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #330099}
+.darkpurple {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #663366}
+.darkred {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #663333}
+.darkpink {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #990099}
+.red {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #FF0000}
+.green {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12; color: #00FF00}
+.yellow {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12; color: #FFFF00}
+.blue {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #3300FF}
+.sky {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12; color: #66FFFF}
+.pink {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #FF66FF}
+.wht {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #CCCCCC}
+.white {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size:12px; color: #FFFFFF}

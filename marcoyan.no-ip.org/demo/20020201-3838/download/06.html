@@ -1,0 +1,239 @@
+<html>
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/download/06.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:15:48 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>三國歪傳之降龍伏虎</title>
+<link rel="stylesheet" href="../ccs/font.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+<BODY background="../pic/bg.gif">
+<div id="mainlayer" style="position:absolute; left:40px; top:15px; width:500px; z-index:1"> 
+  <table width="500" border="0" cellspacing="0" cellpadding="3" align="center">
+    <tr> 
+      <td> 
+        <div align="center"></div>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <div align="center"><a href="05.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a> | <a href="07.html" target="_self"><span class="text2">下一篇</span></a><span class="text2"></span></span></div>
+        </td>
+    </tr>
+    <tr> 
+      <td> 
+        <p class="text2" align="center">&nbsp;</p>
+        <p class="text2" align="center"><b>區域商店寫作</b></p>
+        <p class="text2"><span class="text4">一、檔案位置﹕</span></p>
+        <p class="text2">所有在 &lt;區域&gt;/shp/ 目錄底下的 *.shp 檔案都是商店檔案﹐而所有<br>
+          的商店就是由這些檔案所組成﹐一個檔案代表一個商店。</p>
+        <p class="text4">二、格式﹕</p>
+        <p class="text2">* /* 任何由 * 開頭的這一行為註解﹐系統不會讀入 */<br>
+          Type &lt;數值或字串常數&gt;<br>
+          Keeper &lt;數值&gt;</p>
+        <p class="text2">Object &lt;數值&gt; &lt;數值&gt; &lt;數值&gt; &lt;數值&gt; &lt;數值&gt;<br>
+          或<br>
+          Object1 &lt;數值&gt;<br>
+          ..<br>
+          ..<br>
+          Object5 &lt;數值&gt;</p>
+        <p class="text2">Horse &lt;數值&gt; &lt;數值&gt; &lt;數值&gt; &lt;數值&gt; &lt;數值&gt;<br>
+          Mercenary &lt;數值&gt; &lt;數值&gt; &lt;數值&gt; &lt;數值&gt; &lt;數值&gt;<br>
+          OpenHour &lt;數值&gt;<br>
+          CloseHour &lt;數值&gt;<br>
+          SellProfit &lt;數值&gt;<br>
+          BuyProfit &lt;數值&gt;<br>
+          Sential &lt;數值&gt;</p>
+        <p class="text2">End /* 商店檔案的結束 */</p>
+        <p class="text4">三、範例﹕</p>
+        <p class="text2">Type SHOP_STORE<br>
+          Keeper 301<br>
+          Object 12 11<br>
+          OpenHour 0<br>
+          CloseHour 23<br>
+          SellProfit 80<br>
+          BuyProfit 120<br>
+          Sential 501<br>
+          End</p>
+        <p class="text4">四、說明﹕</p>
+        <p class="text2">(1) Type (商店類型)﹕<br>
+          SHOP_STORE 1 買賣商店<br>
+          SHOP_SMITH 2 鐵匠裝備修理店<br>
+          SHOP_MERCENARY 3 傭兵買賣店<br>
+          SHOP_COPER 4 馬房</p>
+        <p class="text2"> 這一項數值表示這一間商店的形式﹐比如說是屬於普通商店或是裝<br>
+          備修理店或是馬房等等。當你設定了商店種類之後, 後面設定的物<br>
+          品種類則有所不同﹐例如買賣商店則表示可以買賣物品的種類(ITEM_TYPE)<br>
+          ﹐若為裝備修理商店則設定可以修理的裝備位置(ITEM_WEAR_LOCATION)。</p>
+        <p class="text2">(2) Keeper (商店老闆)﹕<br>
+          代表這間商店的店長﹐也就是這隻怪物的號碼﹐這隻怪物必須比這<br>
+          間商店還要早出現﹐不然系統會判定錯誤﹐也就是說這隻怪物的描<br>
+          述必須比這個商店還要早出現﹐這必須是一個數值﹐而且不能被省<br>
+          略。</p>
+        <p class="text2">(3) Object (物品號碼)﹕<br>
+          代表這間商店所販賣的物品的號碼﹐這個號碼不必比物品還要早出<br>
+          現﹐你最多可以輸入五個數值﹐這意味著一間商店最開始最多只能<br>
+          賣五種物品﹐如果是馬房的話﹐只能賣五種馬﹐你可以不必一定輸<br>
+          入到五個數值﹐如果你只想賣兩種物品﹐你就輸入這兩個物品的類<br>
+          型號碼﹐如果你輸入的是 0﹐因為這並不是一個正確的物品號碼﹐<br>
+          所以商店並不會賣這種物品﹐請注意﹐這裡所代表的是買賣物品的<br>
+          種類﹐至於你要賣什麼物品﹐必須到重置裡面設定將物品給予這個<br>
+          老闆才可以﹐至於馬房或傭兵販賣店則可以用 Horse 或是 Mercenary<br>
+          來代替這個數值。如果你輸入的數值個數多於五個﹐系統會忽略多<br>
+          出來的數值﹐你也可以使用 Object1 到 Object5 來個別輸入這<br>
+          五個數值。</p>
+        <p class="text2"> 買賣物品商店可以賣的東西種類如下﹕</p>
+        <p class="text2"> ITEM_LIGHT 燈光類<br>
+          ITEM_SCROLL 捲軸類<br>
+          ITEM_WAND 法杖類<br>
+          ITEM_STAFF 手杖類<br>
+          ITEM_WEAPON 武器類<br>
+          ITEM_TREASURE 珍寶類<br>
+          ITEM_ARMOR 防具類<br>
+          ITEM_POTION 藥水類<br>
+          ITEM_CONTAINER 容器類<br>
+          ITEM_DRINK_CON 水袋類<br>
+          ITEM_FOOD 食物類<br>
+          ITEM_PILL 藥丸類</p>
+        <p class="text2"> 修理商店可以修理的種類如下﹕</p>
+        <p class="text2"> ITEM_TAKE 可以拿的物品（請不要設這一項）<br>
+          ITEM_WEAR_FINGER 手指<br>
+          ITEM_WEAR_NECK 脖子<br>
+          ITEM_WEAR_BODY 身體<br>
+          ITEM_WEAR_HEAD 頭部<br>
+          ITEM_WEAR_LEGS 腿上<br>
+          ITEM_WEAR_FEET 腳上<br>
+          ITEM_WEAR_HANDS 手上<br>
+          ITEM_WEAR_ARMS 手臂<br>
+          ITEM_WEAR_SHIELD 盾<br>
+          ITEM_WEAR_ABOUT 披風<br>
+          ITEM_WEAR_WAIST 腰部<br>
+          ITEM_WEAR_WRIST 手腕<br>
+          ITEM_WIELD 武器<br>
+          ITEM_HOLD 握住<br>
+          ITEM_EARRING 耳環<br>
+          ITEM_ALL_ARMOR 這是特別給修理店使用, 代表所有的防具.<br>
+          ITEM_ALL_REPAIR 這也是專門給修理店用, 代表所有可修理的物品.</p>
+        <p class="text2"> 其他類型請勿設定可以買賣﹐另外商店請勿使用 ITEM_ALL_ARMOR <br>
+          或是 ITEM_ALL_REPAIR 兩種數值﹐會有錯誤。</p>
+        <p class="text2">(4) Horse (馬房賣的馬)﹕<br>
+          這個數值設定賣的馬的號碼﹐最多可以有五個﹐跟 Value 中所代<br>
+          表的一樣﹐不過這個數值只有商店型態 SHOP_HOPER 才有用。</p>
+        <p class="text2">(5) Mercenary (傭兵號碼)﹕<br>
+          這個數值用來設定傭兵的號碼﹐最多可以有五個﹐跟 Value 中所<br>
+          表的一樣3這個數值只有在商店型態是 SHOP_MERCENARY 才有效。</p>
+        <p class="text2">(6) OpenHour (開店時間)﹕<br>
+          就是這間商店的開張的時間﹐你可以輸入 0 到 23 之間的一個數<br>
+          值﹐以代表 0 點到 23 點﹐這個選項當然可以被忽略﹐內定值是<br>
+          0 ﹐請注意﹐程式並不會去檢查你所設定的時間是否位於上述的範<br>
+          圍內﹐因為可能以後的遊戲時間並不一定是 24 小時制。</p>
+        <p class="text2">(7) CloseHour (打烊時間)﹕<br>
+          就是這間商店的關門的時間﹐你可以輸入 0 到 23 之間的一個數<br>
+          值﹐以代表 0 點到 23 點﹐這個選項當然可以被忽略﹐內定值是 <br>
+          23﹐請注意﹐程式並不會去檢查你所設定的時間是否位於上述的範<br>
+          圍內﹐因為可能以後遊戲的時間並不一定是24小時制。</p>
+        <p class="text2">(8) SellProfit (買入比率)﹕<br>
+          這個數值可以被忽略﹐內定值設定 80 ﹐這是此物品被買入時的價<br>
+          格﹐通常會以比一百低的價格向玩家買入﹐請不要設定的比一百高<br>
+          ﹐會被當作經濟來源﹐如果設定一百的話則表示以物品原本的價格<br>
+          收購。</p>
+        <p class="text2">(9) BuyProfit (賣出比率)﹕<br>
+          這個數值可以被忽略﹐內定值設定 120 ﹐這是商店販賣物品時所<br>
+          用的價格﹐為百分比。</p>
+        <p class="text2">(10) Sential (商店位置)﹕<br>
+          設定這個老闆是否位在一個位置﹐後面的號碼即是房間號碼﹐代表<br>
+          這個老闆的買賣地點﹐讓這個老闆不會離開崗位﹐如果你要寫到處<br>
+          亂走的小販請忽略這一個項目﹐並且把小販設定會走動即可﹐如果<br>
+          設定了這一項則老闆不會亂跑﹐會固定在這一個房間。</p>
+        <p class="text2"> P.S. 請勿將怪物設定會亂跑又設定 Sential ﹐那樣會看到這一個<br>
+          怪物很忙很忙﹐努力的跑來跑去﹗</p>
+        <p class="text2">(11) 整個敘述以 End 結束。</p>
+        <p class="text2">(12) 如果你想開一個 24 小時的商店﹐你可以這樣設定</p>
+        <p class="text2">OpenHour 0<br>
+          CloseHour 23</p>
+        <p class="text2">(13) 請注意﹐商店真正所賣的東西﹐是在怪物身上並不和這裡的設<br>
+          定有關﹐所以你想讓這隻怪物賣東西﹐你必須還要再把物品給怪物<br>
+          ﹐所以你必須另外在重置( RESET ) 裡再設定一次﹐這裡所輸入的<br>
+          五個數值只是告訴程式﹐他可以賣哪些東西﹐而賣的東西要另外再<br>
+          設定﹐除此之外﹐你是否有注意到這裡並沒有一個數值設定這個商<br>
+          店是流動攤販或是固定商店﹐這完全取決於這隻店長的屬性﹐若是<br>
+          店長是會走動的﹐那麼這個商店就是一個流動攤販﹐反之則相反。</p>
+        <p class="text2"><span class="text4">五、附註﹕</span><br>
+          (1) 相關字串代表﹕</p>
+        <p class="text2">* 商店種類</p>
+        <p class="text2">SHOP_STORE 1<br>
+          SHOP_SMITH 2<br>
+          SHOP_HOPER 3<br>
+          SHOP_MERCENARY 4</p>
+        <p class="text2">* 物品種類</p>
+        <p class="text2">ITEM_LIGHT 1<br>
+          ITEM_SCROLL 2<br>
+          ITEM_WAND 3<br>
+          ITEM_STAFF 4<br>
+          ITEM_WEAPON 5<br>
+          ITEM_TREASURE 6<br>
+          ITEM_ARMOR 7<br>
+          ITEM_POTION 8<br>
+          ITEM_FURNITURE 9<br>
+          ITEM_TRASH 10<br>
+          ITEM_CONTAINER 11<br>
+          ITEM_DRINK_CON 12<br>
+          ITEM_KEY 13<br>
+          ITEM_FOOD 14<br>
+          ITEM_MONEY 15<br>
+          ITEM_BOAT 16<br>
+          ITEM_CORPSE_NPC 17<br>
+          ITEM_CORPSE_PC 18<br>
+          ITEM_FOUNTAIN 19<br>
+          ITEM_PILL 20<br>
+          ITEM_MAGICSTONE 21</p>
+        <p class="text2">* 物品的穿戴旗標</p>
+        <p class="text2">ITEM_NOT_TAKE 0<br>
+          ITEM_TAKE 1<br>
+          ITEM_WEAR_FINGER 2<br>
+          ITEM_WEAR_NECK 4<br>
+          ITEM_WEAR_BODY 8<br>
+          ITEM_WEAR_HEAD 16<br>
+          ITEM_WEAR_LEGS 32<br>
+          ITEM_WEAR_FEET 64<br>
+          ITEM_WEAR_HANDS 128<br>
+          ITEM_WEAR_ARMS 256<br>
+          ITEM_WEAR_SHIELD 512<br>
+          ITEM_WEAR_ABOUT 1024<br>
+          ITEM_WEAR_WAIST 2048<br>
+          ITEM_WEAR_WRIST 4096<br>
+          ITEM_WIELD 8192<br>
+          ITEM_HOLD 16384<br>
+          ITEM_EARRING 32768<br>
+          ITEM_ALL_ARMOR 40958<br>
+          ITEM_ALL_REPAIR 49150</p>
+        <p><span class="text2">(2) 檔案名稱與位置﹕<br>
+          <br>
+          商店檔一律放在區域的 shp 子目錄下﹐檔名為 *.shp ﹐至於檔案<br>
+          的名稱請自行設定﹐只是在 shp 目錄下所有 *.shp 檔案都會被當<br>
+          作商店檔案處理。<br>
+          </span> </p>
+      </td>
+    </tr>
+    <tr> 
+      <td> 
+        <div align="center"><a href="05.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a> | <a href="07.html" target="_self"><span class="text2">下一篇</span></a></span></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</BODY>
+
+<!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/download/06.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:15:48 GMT -->
+</html>

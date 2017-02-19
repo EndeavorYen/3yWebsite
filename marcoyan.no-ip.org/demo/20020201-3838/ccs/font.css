@@ -1,0 +1,16 @@
+.font {  font-size: 10px; font-family: "Verdana", "Arial", "Helvetica", "sans-serif"}
+.font2 {  font-size: 12px; font-family: "Verdana", "Arial", "Helvetica", "sans-serif"}
+.text2 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px}
+.text3 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 16px}
+.text1 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 14px}
+a:active {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #990066}
+a:hover {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #990066}
+a:link {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #990066}
+a:visited {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #990066}
+.text4 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #990066}
+.ming1 {  font-family: "細明體"; font-size: 12px}
+.ming2 {  font-family: "細明體"; font-size: 14px}
+.text5 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #669966}
+.text6 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #6699FF}
+.text-red {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #FF0000}
+.font-blue {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #0066CC}
