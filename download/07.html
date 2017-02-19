@@ -2,8 +2,8 @@
 
 <!-- Mirrored from marcoyan.no-ip.org/demo/20020201-3838/download/07.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 11 Mar 2011 01:15:48 GMT -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=big5">
-<title>�T��n�Ǥ����s���</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>三國歪傳之降龍伏虎</title>
 <link rel="stylesheet" href="../ccs/font.css" type="text/css">
 <script language="JavaScript">
 <!--
@@ -26,44 +26,44 @@ MM_reloadPage(true);
     </tr>
     <tr>
       <td> 
-        <div align="center"><a href="06.html" target="_self"><span class="text2">�W�@�g</span></a><span class="text2"> 
-          | <a href="index.html" target="_self">�^����</a></span></div>
+        <div align="center"><a href="06.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a></span></div>
         </td>
     </tr>
     <tr> 
       <td> 
         <p class="text2" align="center">&nbsp;</p>
-        <p class="text2" align="center"><b>�Ǫ��{���g�@</b></p>
+        <p class="text2" align="center"><b>怪物程式寫作</b></p>
         <p class="text2"><span class="text2"><br>
-          </span><span class="font">�@�B�Ǫ��i�оǧޯ༶�g��k�G</span></p>
-        <p class="font">(1) �榡</p>
+          </span><span class="font">一、怪物可教學技能撰寫方法：</span></p>
+        <p class="font">(1) 格式</p>
         <p class="font">#Learn<br>
-          Adept &lt;�Ʀr&gt; /* ���m�� */<br>
-          Cost &lt;�Ʀr&gt; /* �� �� */<br>
-          Inventory &lt;�Ʀr&gt; /* ���ë� */<br>
-          Name &lt;�r��&gt; /* �ޯ�W */<br>
+          Adept &lt;數字&gt; /* 熟練度 */<br>
+          Cost &lt;數字&gt; /* 價 格 */<br>
+          Inventory &lt;數字&gt; /* 隱藏度 */<br>
+          Name &lt;字串&gt; /* 技能名 */<br>
           End</p>
-        <p class="font">(2) �d��</p>
+        <p class="font">(2) 範例</p>
         <p class="font">#Learn<br>
           Adept 80<br>
           Cost 100<br>
           Inventory 1<br>
           Name 'fire lance'<br>
           End</p>
-        <p class="font">(3) ����</p>
-        <p class="font">�ޯ�榡��b�Ǫ��᭱, �H #Learn �}�l, End ����.</p>
-        <p class="font">�䤤 Adept ���ܦ��Ǫ��ҷ|�����ޯ઺���m��, ���@��@�ʪ����.<br>
-          Cost �h�O���a�ǲߦ��ޯ�ɪ����O.<br>
-          Inventory �h�����çޯ����, �Y�V���h���i�হ�Ǫ��b�H�a�d�߾�<br>
-          ���ޯ�ɷ|����, �H�@�ʬ���, �Y�n�j�a�����D���Ǫ��|���ޯ�, ��<br>
-          �]�C�@�I, �p�@���k.<br>
-          Name �h�O���Ǫ��|���ޯ઺�W�r, �H��� ' ���A�_��, �����W�r��<br>
-          ���аѦҩҵo�������{�b�ޯ઺�峹.</p>
-        <p class="font">�p�G�n�Ǫ��i�H�b�԰��ɵo�X�@�˧ޯ�i�H�� Enable ���O, �����p�U:</p>
-        <p class="font">1. �y�k </p>
-        <p class="font">Enable &lt;���m��&gt; &lt;�ޯ�W&gt;</p>
-        <p class="font">2. �d��</p>
-        <p class="font">/* �������d�Y�@�Ǫ����@���� */<br>
+        <p class="font">(3) 說明</p>
+        <p class="font">技能格式跟在怪物後面, 以 #Learn 開始, End 結束.</p>
+        <p class="font">其中 Adept 表示此怪物所會的此技能的熟練度, 為一到一百的整數.<br>
+          Cost 則是玩家學習此技能時的收費.<br>
+          Inventory 則為隱藏技能指數, 若越高則有可能此怪物在人家查詢擁<br>
+          有技能時會隱藏, 以一百為限, 若要大家都知道此怪物會此技能, 請<br>
+          設低一點, 如一左右.<br>
+          Name 則是此怪物會的技能的名字, 以兩個 ' 號括起來, 有關名字部<br>
+          份請參考所發表有關現在技能的文章.</p>
+        <p class="font">如果要怪物可以在戰鬥時發出一樣技能可以用 Enable 指令, 說明如下:</p>
+        <p class="font">1. 語法 </p>
+        <p class="font">Enable &lt;熟練度&gt; &lt;技能名&gt;</p>
+        <p class="font">2. 範例</p>
+        <p class="font">/* 此為陳留某一怪物的一部份 */<br>
           Class CLASS_FIGHTER<br>
           Gold 100<br>
           Exp 100<br>
@@ -73,31 +73,31 @@ MM_reloadPage(true);
           &gt;greet_prog 30~<br>
           look $n<br>
           smile<br>
-          say �ݧA�Z�j����, �n���n�[�J��\�M?<br>
+          say 看你蠻強壯的, 要不要加入虎豹騎?<br>
           ~<br>
           &gt;speech_prog yes~<br>
           smile $n<br>
           spank $n<br>
-          say �쫰�n����\�M�۶ҳB�h���W�a!<br>
+          say 到城南的虎豹騎招募處去報名吧!<br>
           ~<br>
           |</p>
-        <p class="font">3. ����</p>
-        <p class="font">Enable �i�H���Ǫ��b�԰��ɥi�H�ϥΦ����ޯ�Ӿ԰�, ���ΦA�H <br>
-          fighting program �Ӽg, �i�H�����N���ޯ൹�����Ǫ�.<br>
-          �䤤���m�׽d��Ѥ@��@��, �W�r�M�ޯ�W�@��.</p>
-        <p class="font">�G�B�Ǫ����ݵ{������ -- �Y MOB PROGRAM .</p>
-        <p class="font">(1) �y�k:</p>
+        <p class="font">3. 說明</p>
+        <p class="font">Enable 可以讓怪物在戰鬥時可以使用此項技能來戰鬥, 不用再以 <br>
+          fighting program 來寫, 可以直接將此技能給予此怪物.<br>
+          其中熟練度範圍由一到一百, 名字和技能名一樣.</p>
+        <p class="font">二、怪物附屬程式部份 -- 即 MOB PROGRAM .</p>
+        <p class="font">(1) 語法:</p>
         <p class="font"> Program<br>
           &gt;**** prog 1 ****~<br>
-          &lt;���O&gt;<br>
+          &lt;指令&gt;<br>
           ......<br>
           ~<br>
           &gt;**** Prog 2 ****~<br>
-          &lt;���O&gt;<br>
+          &lt;指令&gt;<br>
           .....<br>
           ~<br>
           |</p>
-        <p class="font">(2) �d��:</p>
+        <p class="font">(2) 範例:</p>
         <p class="font">Class CLASS_FIGHTER<br>
           Gold 100<br>
           Exp 100<br>
@@ -107,166 +107,166 @@ MM_reloadPage(true);
           &gt;greet_prog 30~<br>
           look $n<br>
           smile<br>
-          say �ݧA�Z�j����, �n���n�[�J��\�M?<br>
+          say 看你蠻強壯的, 要不要加入虎豹騎?<br>
           ~<br>
           &gt;speech_prog yes~<br>
           smile $n<br>
           spank $n<br>
-          say �쫰�n����\�M�۶ҳB�h���W�a!<br>
+          say 到城南的虎豹騎招募處去報名吧!<br>
           ~<br>
           |<br>
           </p>
-        <p class="font">(3) ����:</p>
-        <p class="font">�Ǫ����ݵ{���i�H���p���Ǫ���[�H�ʤ�, �]�i�H���p���Ǫ���[�״I.<br>
-          Mob program ���}�Y�O�@�� &gt; �r��, �ŧi�������M�D�n�ʧ@����������<br>
-          �@�� ~ �ӵ���... �Ҧ��� Mob program �h�� | �ӵ���, �M�ϰ��ɨ�L<br>
-          �a����}....</p>
-        <p class="font">�Ҧ��� mob program �p�U:</p>
-        <p class="font">#define ERROR_PROG -1 /* �^�����~�{�� -- ���n�� */<br>
-          #define IN_FILE_PROG 0 /* �ɮ׵{�� -- ���n�� */<br>
-          #define ACT_PROG 1 /* �ʧ@�{�� */<br>
-          #define SPEECH_PROG 2 /* ���ܵ{�� */<br>
-          #define RAND_PROG 4 /* �üƵ{�� */<br>
-          #define FIGHT_PROG 8 /* �԰��{�� */<br>
-          #define DEATH_PROG 16 /* ���`�{�� */<br>
-          #define HITPRCNT_PROG 32 /* �֦�{�� */<br>
-          #define ENTRY_PROG 64 /* �i�J�{�� -- ���n�� */<br>
-          #define GREET_PROG 128 /* �i�J�{�� */<br>
-          #define ALL_GREET_PROG 256 /* �P�W -- ���n�� */<br>
-          #define GIVE_PROG 512 /* �����{�� */<br>
-          #define BRIBE_PROG 1024 /* ���{�� */</p>
-        <p class="font">�ӧO�����p�U:</p>
+        <p class="font">(3) 說明:</p>
+        <p class="font">怪物附屬程式可以讓妳的怪物更加人性化, 也可以讓妳的怪物更加豐富.<br>
+          Mob program 的開頭是一個 &gt; 字元, 宣告的部份和主要動作的部份都有<br>
+          一個 ~ 來結尾... 所有的 Mob program 則用 | 來結尾, 和區域檔其他<br>
+          地方分開....</p>
+        <p class="font">所有的 mob program 如下:</p>
+        <p class="font">#define ERROR_PROG -1 /* 回報錯誤程式 -- 不要用 */<br>
+          #define IN_FILE_PROG 0 /* 檔案程式 -- 不要用 */<br>
+          #define ACT_PROG 1 /* 動作程式 */<br>
+          #define SPEECH_PROG 2 /* 說話程式 */<br>
+          #define RAND_PROG 4 /* 亂數程式 */<br>
+          #define FIGHT_PROG 8 /* 戰鬥程式 */<br>
+          #define DEATH_PROG 16 /* 死亡程式 */<br>
+          #define HITPRCNT_PROG 32 /* 少血程式 */<br>
+          #define ENTRY_PROG 64 /* 進入程式 -- 不要用 */<br>
+          #define GREET_PROG 128 /* 進入程式 */<br>
+          #define ALL_GREET_PROG 256 /* 同上 -- 不要用 */<br>
+          #define GIVE_PROG 512 /* 給予程式 */<br>
+          #define BRIBE_PROG 1024 /* 賄賂程式 */</p>
+        <p class="font">個別說明如下:</p>
         <p class="font"><br>
           3. Act_prog</p>
-        <p class="font"> �o��Ĳ�o��speech_prog���P���a��b��speech�����O�H��L������<br>
-          ��Ĳ�o�ʧ@�A���Oact_prog�O�����Ӧ�act()�Ұe�X���T���A�Ӳ��Ͱʧ@<br>
-          �Ҧp������O......<br>
+        <p class="font"> 這個觸發跟speech_prog不同的地方在於speech接受別人跟他說的話<br>
+          來觸發動作，但是act_prog是接收來自act()所送出的訊號，來產生動作<br>
+          例如社交指令......<br>
           For example:</p>
-        <p> <span class="font">&gt;act_prog [p] ��A�r�֪��L��~<br>
+        <p> <span class="font">&gt;act_prog [p] 對你愉快的微笑~<br>
           sm<br>
           gig<br>
-          say �F���I�S���L��......:P<br>
+          say 幹嘛！沒笑過啊......:P<br>
           ~<br>
           |</span></p>
-        <p class="font"> �h���H�������qact()�Ұe�Ӫ��o�y�ܪ��Y�Ӧr�A�N�|Ĳ�o�o�ǰʧ@�A<br>
-          ���p�G[p]�Ѽƫ��w���ܡA�h��Ӧr�곣�n�ŦX�~�|Ĳ�o......<br>
-          �ҥH��Ĳ�o�D�n�O�Φb�������O���X�����W.</p>
+        <p class="font"> 則此人收到任何從act()所送來的這句話的某個字，就會觸發這些動作，<br>
+          但如果[p]參數指定的話，則整個字串都要符合才會觸發......<br>
+          所以此觸發主要是用在對社交指令做出反應上.</p>
         <p class="font"> 4.speech_prog</p>
-        <p class="font"> �襤��mud�ӻ��A�o��prog����[p]�Ѽ��Z���n���A�]�����V�^��Ů�N<br>
-          �i�H�_�r�A�襤��ӻ��A�@�Ӧr�N�O�@�ӵ��A�Y�ϨS���Ů�A��prog<br>
-          ���M�{���L�O��ӵ�......<br>
+        <p class="font"> 對中文mud來說，這個prog中的[p]參數蠻重要的，因為不向英文空格就<br>
+          可以斷字，對中文來說，一個字就是一個詞，即使沒有空格，此prog<br>
+          仍然認為他是兩個詞......<br>
           For Example:</p>
-        <p> <span class="font">&gt;speech_prog �ڤ��O�G�N���h�}�|��~<br>
-          say ��I�ֺާA�A���n�z�A�F!!!<br>
+        <p> <span class="font">&gt;speech_prog 我不是故意不去開會的~<br>
+          say 哼！誰管你，不要理你了!!!<br>
           ~<br>
-          &gt;speech_prog �}�|~<br>
-          say �}�|�@�w�n�ӳ�!!!<br>
-          say ���M�H�ᤣ�z�A�F!!!<br>
+          &gt;speech_prog 開會~<br>
+          say 開會一定要來喔!!!<br>
+          say 不然以後不理你了!!!<br>
           ~<br>
-          &gt;speech_prog �|~<br>
-          say �u���|�ӳ�?<br>
-          say �u���|�ӳ�?<br>
-          say ���n���ک�!!!<br>
+          &gt;speech_prog 會~<br>
+          say 真的會來喔?<br>
+          say 真的會來喔?<br>
+          say 不要給我放鳥!!!<br>
           ~<br>
           |</span></p>
-        <p class="font"> ���]�H�W�T�ӬOLC��mob_prog...:P ���ڸ�L�� &quot;�|&quot; ���ɭԡA<br>
-          �L�N�|�@�Ѹ�����T�q�ܥ������X�ӡA�o�ˤl�A���M�ڧ���������L�b��ԣ�F<br>
-          ���O���ڭ̧�[p]�Ѽƥ[�W���ɭԡA�ڻ��|���ɭԡALC�N�|�ӹw�������X<br>
-          �ĤT�q�ܡA�ҥH���@��mob���h��speech_prog�A�B�䤤������r�������ɡA<br>
-          �@�w�n�[�W [p] .</p>
+        <p class="font"> 假設以上三個是LC的mob_prog...:P 當我跟他說 &quot;會&quot; 的時候，<br>
+          他就會一股腦的把三段話全部說出來，這樣子，當然我完全不知到他在說啥了<br>
+          但是當我們把[p]參數加上的時候，我說會的時候，LC就會照預期的說出<br>
+          第三段話，所以當一個mob有多個speech_prog，且其中的關鍵字有類似時，<br>
+          一定要加上 [p] .</p>
         <p class="font"> 5. Rand_prog</p>
-        <p class="font"> �üƪ��{��....<br>
-          �榡�p�U :</p>
+        <p class="font"> 亂數的程式....<br>
+          格式如下 :</p>
         <p> <span class="font">&gt;rand_prog (number)~<br>
           (main)<br>
           ~</span></p>
-        <p class="font"> �䤤�Ʀr�� 1 �� 100 �����...<br>
-          ����p�󪺳����Ӭ�...<br>
-          �Y �Y�� 30 ���ܴN�� 30% �����v<br>
-          �ӱ��W���{���Y�� mob �b�C�@�� tick(�t�ήɶ�)�|�h�]�@���ü�<br>
-          �ӨM�w�O�_�|�ʨ� main ������....</p>
+        <p class="font"> 其中數字為 1 到 100 的整數...<br>
+          取其小於的部份來看...<br>
+          即 若取 30 的話就有 30% 的機率<br>
+          而掛上此程式即此 mob 在每一次 tick(系統時間)會去跑一次亂數<br>
+          來決定是否會動到 main 的部份....</p>
         <p class="font"> 6. Fight_prog</p>
-        <p class="font"> ���԰����ҥΪ� mob program ...<br>
-          �榡�p�U :</p>
+        <p class="font"> 為戰鬥中所用的 mob program ...<br>
+          格式如下 :</p>
         <p> <span class="font">&gt;fight_prog (number)~<br>
           (main)<br>
           ~</span></p>
-        <p class="font"> �䤤 number �]�w���v...<br>
-          �� program �O�԰����~�|�i�J...<br>
-          �q�`��g�p�U :</p>
+        <p class="font"> 其中 number 設定機率...<br>
+          本 program 是戰鬥中才會進入...<br>
+          通常改寫如下 :</p>
         <p> <span class="font">&gt;fight_prog 100~<br>
           if rand(number)<br>
           (main)<br>
           endif<br>
           ~</span></p>
-        <p class="font"> �ӨϥΨt�Ϊ��ü�, �Ӥ��� mob prog ���ü�....</p>
+        <p class="font"> 來使用系統的亂數, 而不用 mob prog 的亂數....</p>
         <p class="font"> 7. Death_prog</p>
-        <p class="font"> �o��������m���A�i�H���A��mob���{���e�����_�A�Ҧp�ۭ�ԣ<br>
-          &quot;I will be back.....&quot;.....:P �άO�N�����L���H�e��@�ӧ󨸴c��<br>
-          �a��A���Ѥj�h�d�w�L�A���M���ܨӭӤj�ܨ��A�����૬�ӦA���@�ԡA<br>
-          �N��saga���Ѥj�@�ˡA���F�٭n�A�Ӥ@��...:P �άO�N�ۤv�a���_��<br>
-          �H�ۦۤv�@�_�P���A�����a�հ��u�A���M�o�O�����v��......<br>
-          ���ܪ��ܭn�� mpecho �άO mprecho �~��.</p>
+        <p class="font"> 這部分滿精彩的，可以讓你的mob做臨死前的報復，例如喊個啥<br>
+          &quot;I will be back.....&quot;.....:P 或是將殺死他的人送到一個更邪惡的<br>
+          地方，讓老大去搞定他，不然乾脆來個大變身，直接轉型來再次作戰，<br>
+          就像saga的老大一樣，死了還要再來一次...:P 或是將自己帶的寶物<br>
+          隨著自己一起銷毀，讓玩家白做工，當然這是有機率的......<br>
+          說話的話要用 mpecho 或是 mprecho 才行.</p>
         <p class="font"> 8.Hitprcnt_prog</p>
-        <p class="font"> �� mob �� hp(�ͩR�O)�C��Y�ƮɩҶi�檺 program ...<br>
-          �榡�p�U :</p>
+        <p class="font"> 當 mob 的 hp(生命力)低於某數時所進行的 program ...<br>
+          格式如下 :</p>
         <p> <span class="font">&gt;hitprcnt_prog (number)~<br>
           (main)<br>
           ~</span></p>
-        <p class="font"> �Ʀr���� wimpy �� hp ��...<br>
-          ���L�� program �S����...<br>
-          �Y�O�n�Ψ쪺��,�h�b��L program ���[�J :</p>
+        <p class="font"> 數字表示 wimpy 的 hp 值...<br>
+          不過本 program 沒有用...<br>
+          若是要用到的話,則在其他 program 中加入 :</p>
         <p class="font"> if hitprcnt($i) &lt;= (number)<br>
           (main)<br>
           endif</p>
-        <p class="font"> �Y���ۦP���ĪG...</p>
+        <p class="font"> 即有相同的效果...</p>
         <p class="font"> 9. <br>
           Greet_prog</p>
-        <p class="font"> �򥻤W���O�� mob ���쪱�a�� mob �i�J�o�@��ɩ��X�ʪ�...<br>
-          �H Greet_prog �ϥθ��h...<br>
-          �榡�p�U :</p>
+        <p class="font"> 基本上都是此 mob 見到玩家或 mob 進入這一格時所驅動的...<br>
+          以 Greet_prog 使用較多...<br>
+          格式如下 :</p>
         <p> <span class="font">&gt;greet_prog (numbar)~<br>
           (main)<br>
           ~</span></p>
-        <p class="font"> �Ʀr���ܾ��v...</p>
+        <p class="font"> 數字表示機率...</p>
         <p class="font"><br>
           10. Give_prog</p>
-        <p class="font"> ������ program ...<br>
-          �Y �����Y���� mob �ɷ|�X�ʪ� prog...<br>
-          �榡�p�U :</p>
+        <p class="font"> 給予的 program ...<br>
+          即 給予某物給 mob 時會驅動的 prog...<br>
+          格式如下 :</p>
         <p> <span class="font">&gt;give_prog (string)~<br>
           (main)<br>
           ~</span></p>
-        <p class="font"> string �N�����Ӫ��~....<br>
-          �Y���O���n�N���~�d��, �бN���~�H mppurge �M��,<br>
-          �H�K���a�i�H�A���^�h�o���Q��..^_^</p>
+        <p class="font"> string 代表那個物品....<br>
+          若不是必要將物品留著, 請將物品以 mppurge 清掉,<br>
+          以免玩家可以再拿回去廢物利用..^_^</p>
         <p class="font"> 11. Bribe_prog</p>
-        <p class="font"> �o���U�W��q�A�N�O���Ϊ���!!!�]�N�O���L����!!!<br>
+        <p class="font"> 這個顧名思義，就是賄賂用的嘛!!!也就是給他錢啦!!!<br>
           For example:<br>
           <br>
           &gt;bribe_prog 1501~<br>
           if box_recharge($n)==0<br>
-          tell $n �A�S�ưe�ڿ��F��? �ٵ��A�a!!!<br>
+          tell $n 你沒事送我錢幹嘛? 還給你吧!!!<br>
           give coins $n<br>
           break<br>
           endif<br>
           if box_recharge($n)==1<br>
-          tell $n �z...�o��h��...�O�n���p�O��? ���ڴN���Ȯ�F.<br>
+          tell $n 哇...這麼多啊...是要當小費嗎? 那我就不客氣了.<br>
           thank $n<br>
           mppurge coins<br>
-          emote ���L���˶���Ľc......<br>
-          tell $n �ɥR�n�F, ���^�h�a!<br>
+          emote 忙碌底裝填著藥箱......<br>
+          tell $n 補充好了, 拿回去吧!<br>
           mpoload 27 1<br>
           give tiny $n<br>
           mset $n box_recharge 0<br>
           break<br>
           endif<br>
           if box_recharge($n)==2<br>
-          tell $n �z...�o��h��...�O�n���p�O��? ���ڴN���Ȯ�F.<br>
+          tell $n 哇...這麼多啊...是要當小費嗎? 那我就不客氣了.<br>
           thank $n<br>
           mppurge coins<br>
-          emote ���L���˶���Ľc......<br>
-          tell $n �ɥR�n�F, ���^�h�a!<br>
+          emote 忙碌底裝填著藥箱......<br>
+          tell $n 補充好了, 拿回去吧!<br>
           mpoload 8728 20<br>
           give small $n<br>
           mset $n box_recharge 0<br>
@@ -275,15 +275,15 @@ MM_reloadPage(true);
           ~<br>
           &gt;bribe_prog 1500~<br>
           if box_recharge($n)==0<br>
-          tell $n �A�S�ưe�ڿ��F��? �ٵ��A�a!<br>
+          tell $n 你沒事送我錢幹嘛? 還給你吧!<br>
           give coins $n<br>
           break<br>
           endif<br>
           if box_recharge($n)==1<br>
-          tell $n ���ݭn�o��h����! �h���ڴN���p�O�a!!!<br>
+          tell $n 不需要這麼多錢喔! 多的我就當小費吧!!!<br>
           mppurge coins<br>
-          emote ���L���˶���Ľc......<br>
-          tell $n �ɥR�n�F, ���^�h�a!<br>
+          emote 忙碌底裝填著藥箱......<br>
+          tell $n 補充好了, 拿回去吧!<br>
           mpoload 27 1<br>
           give tiny $n<br>
           smile $n<br>
@@ -292,8 +292,8 @@ MM_reloadPage(true);
           endif<br>
           if box_recharge($n)==2<br>
           mppurge coins<br>
-          emote ���L���˶���Ľc......<br>
-          tell $n �ɥR�n�F, ���^�h�a!<br>
+          emote 忙碌底裝填著藥箱......<br>
+          tell $n 補充好了, 拿回去吧!<br>
           mpoload 8728 20<br>
           give small $n<br>
           smile $n<br>
@@ -303,38 +303,38 @@ MM_reloadPage(true);
           ~<br>
           &gt;bribe_prog 501~<br>
           if box_recharge($n)==0<br>
-          tell $n �A�S�ưe�ڿ��F��? �ٵ��A�a!!!<br>
+          tell $n 你沒事送我錢幹嘛? 還給你吧!!!<br>
           give coins $n<br>
           bow $n<br>
           break<br>
           endif<br>
           if box_recharge($n)==1<br>
-          tell $n �z...�o��h��...�O�n���p�O��? ���ڴN���Ȯ�F.<br>
+          tell $n 哇...這麼多啊...是要當小費嗎? 那我就不客氣了.<br>
           thank $n<br>
           mppurge coins<br>
-          emote ���L���˶���Ľc......<br>
-          tell $n �ɥR�n�F, ���^�h�a!<br>
+          emote 忙碌底裝填著藥箱......<br>
+          tell $n 補充好了, 拿回去吧!<br>
           mpoload 27 1<br>
           give tiny $n<br>
           mset $n box_recharge 0<br>
           break<br>
           endif<br>
           if box_recharge($n)&gt;=2<br>
-          tell $n �o��@�I��������!<br>
+          tell $n 這麼一點錢不夠喔!<br>
           give coins $n<br>
           break<br>
           endif<br>
           ~<br>
           &gt;bribe_prog 500~<br>
           if box_recharge($n)==0<br>
-          tell $n �A�S�ưe�ڿ��F��? �ٵ��A�a!<br>
+          tell $n 你沒事送我錢幹嘛? 還給你吧!<br>
           give 1000 coins $n<br>
           break<br>
           endif<br>
           if box_recharge($n)==1<br>
           mppurge coins<br>
-          emote ���L���˶���Ľc......<br>
-          tell $n �ɥR�n�F, ���^�h�a!<br>
+          emote 忙碌底裝填著藥箱......<br>
+          tell $n 補充好了, 拿回去吧!<br>
           mpoload 27 1<br>
           give tiny $n<br>
           smile $n<br>
@@ -342,52 +342,52 @@ MM_reloadPage(true);
           break<br>
           endif<br>
           if box_recharge($n)&gt;=2<br>
-          tell $n �o��@�I��������! �i�O�ڤ]���n�N�䦬�U, �٬O�٧A�a!!!<br>
+          tell $n 這麼一點錢不夠喔! 可是我也不好意思收下, 還是還你吧!!!<br>
           smile $n<br>
           give coins $n<br>
           break<br>
           endif<br>
           ~<br>
           &gt;bribe_prog 1~<br>
-          tell $n �o��@�I���n�F��...���^�h�a!!!<br>
+          tell $n 這麼一點錢要幹嘛...拿回去吧!!!<br>
           give coins $n<br>
           ~<br>
           |<br>
-          �H�W�O8888������v�~�S��bribe_prog�A�Ѧ��ҧڭ̥i�H�ݥX�A<br>
-          bribe_prog�����n�Ѥj�ƨ�p�A�]���j�M���ǬO�ѤW���U�A�Ĥ@�ӲŦX��<br>
-          bribe_prog�A�u�n�O�j��ε��󳣷|Ĳ�o���ʧ@�A�t�~�����n�`�N���O�A<br>
-          ���a�ҵ��L�̪����|�ܦ����~���䨭�W�A�u�n�����L�̧Y�i���^�A�ҥH<br>
-          �n�O�o�Q��mppurge coins�ӧ⨺�ǿ��M���A�K�Q���a�Q�ΡA�̦n�O������<br>
-          �N�M���A�K�o�Ӥ���...:P ��L�Цۤv�ݨҤl�����ԭz......</p>
+          以上是8888中的醫師漢特的bribe_prog，由此例我們可以看出，<br>
+          bribe_prog必須要由大排到小，因為搜尋順序是由上往下，第一個符合的<br>
+          bribe_prog，只要是大於或等於都會觸發此動作，另外必須要注意的是，<br>
+          玩家所給他們的錢會變成物品放於其身上，只要殺死他們即可取回，所以<br>
+          要記得利用mppurge coins來把那些錢清掉，免被玩家利用，最好是收錢後<br>
+          就清掉，免得來不及...:P 其他請自己看例子中的敘述......</p>
         <p class="font"><br>
-          �ɥR:</p>
-        <p class="font"> �Ǫ�Ĳ�o�ʧ@���\�h���n�B, �i�H���ϰ���״I, �ƦܥΨӸ���.<br>
-          �A���C�X�@�ǥi�H�Ϊ����U���O:</p>
+          補充:</p>
+        <p class="font"> 怪物觸發動作有許多的好處, 可以讓區域更豐富, 甚至用來解謎.<br>
+          再次列出一些可以用的輔助指令:</p>
         <p class="font"> mpasound mpjunk<br>
           mppurge mpechoat mpechoaround<br>
           mpkill mpmload mpoload<br>
           mppurge mpgoto mpat<br>
           mptransfer mpforce</p>
-        <p class="font"> �H�W���Ǫ��ҥi�H�Ϊ����O, �ӧO�����p�U:</p>
-        <p class="font"> mppurge �M�����W���~<br>
-          mpkill ���`�]�Ǫ��Ϊ��a�^<br>
-          mpmload Ū���Ǫ��X��<br>
-          mpoload Ū�����~�X��<br>
-          mpgoto �e��<br>
-          mptransfer �l��<br>
-          mpforce �R�O</p>
-        <p class="font"> �ܩ��L�����������U���A�满��.</p>
-        <p class="font"> �٦��@�ǥi�H�Ϊ��B��, �i�H�Φb check , �p</p>
+        <p class="font"> 以上為怪物所可以用的指令, 個別說明如下:</p>
+        <p class="font"> mppurge 清除身上物品<br>
+          mpkill 殺害（怪物或玩家）<br>
+          mpmload 讀取怪物出來<br>
+          mpoload 讀取物品出來<br>
+          mpgoto 前往<br>
+          mptransfer 召喚<br>
+          mpforce 命令</p>
+        <p class="font"> 至於其他有關的部份下次再行說明.</p>
+        <p class="font"> 還有一些可以用的運算, 可以用在 check , 如</p>
         <p class="font"> if ispc( $n )<br>
-          &lt;���Y�Y��&gt;<br>
+          &lt;做某某事&gt;<br>
           endif</p>
-        <p class="font"> �䤤�i�H�Ϊ��B�⤸�p�U:</p>
+        <p class="font"> 其中可以用的運算元如下:</p>
         <p><span class="font"> rand ispc isnpc isgood isfight isimmort ischarmed 
           isfollow<br>
           isaffected hitprcnt inroom sex position level class name<br>
           goldsmt objtype objval0 objval1 objval2 objval3 number<br>
           <br>
-          �q�` $n ���ܪ��a�]��H�^, �� $i �h���ܦ��Ǫ�.<br>
+          通常 $n 表示玩家（對象）, 而 $i 則表示此怪物.<br>
           </span> </p>
         <p class="text2"><span class="text2"> <br>
           </span> </p>
@@ -395,8 +395,8 @@ MM_reloadPage(true);
     </tr>
     <tr> 
       <td> 
-        <div align="center"><a href="06.html" target="_self"><span class="text2">�W�@�g</span></a><span class="text2"> 
-          | <a href="index.html" target="_self">�^����</a></span></div>
+        <div align="center"><a href="06.html" target="_self"><span class="text2">上一篇</span></a><span class="text2"> 
+          | <a href="index.html" target="_self">回索引</a></span></div>
       </td>
     </tr>
   </table>
